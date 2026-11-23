@@ -854,11 +854,23 @@
     .modal-overlay.open .modal-content {
       transform: scale(1);
     }
+    
+    /* ✅ FIX: Absolute positioning ensures iframe fills the container */
     .modal-content iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: 0;
     }
+
+    /* ✅ FIX: The container also needs to fill the modal */
+    #iframeContainer {
+      position: absolute;
+      inset: 0;
+    }
+
     .modal-close {
       position: absolute;
       top: var(--space-4);
@@ -1196,15 +1208,13 @@
 
   <script>
     // ============================================================
-    // CONFIG: PASTE YOUR FACEBOOK PROFILE PICTURE URL / ID HERE
+    // CONFIG: FACEBOOK PROFILE PICTURE
     // ============================================================
     const FACEBOOK_PROFILE_PICTURE_URL = "https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-1/863381626_1631530508707771_3229720357454502442_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s200x200&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEauTI_GuL-8rxf1M4BDV3lOHrWW3b3y3M4etZbdvfLcwNXFGkxKwkS-Jj-VCpJzuWsaOtRXpZK6GTF9l9hrONt&_nc_ohc=yH4a-I8IxP4Q7kNvwHhLM-5&_nc_oc=Ado4hLn27O48XYnDj_8kJzYFVb9BHb61r0LM67REihIKflyT76DiVImYke18hvwEcDo&_nc_zt=24&_nc_ht=scontent.fcrk1-2.fna&_nc_gid=bu6yKRb38qIvXj3uE92EqQ&_nc_ss=7b2a8&oh=00_AQS2jUtTE5hhvU-uefgNoWuzWslW_1pNF-WcCjF-JCr0lw&oe=6B0A115E";
 
     // ============================================================
-    // CONFIG: YOUTUBE VIDEO LINKS
+    // CONFIG: YOUTUBE VIDEOS
     // ============================================================
-    // First 3 are your actual samples (Short-Form category).
-    // Sample 4 & 5 are placeholders — paste your URLs when ready.
     const FEATURED_VIDEOS = [
       {
         url: "https://www.youtube.com/watch?v=QaV5Vjv4Nko",
@@ -1239,7 +1249,7 @@
     ];
 
     // ============================================================
-    // CONFIG: STATIC PROJECTS (non-video)
+    // CONFIG: STATIC PROJECTS
     // ============================================================
     const STATIC_PROJECTS = [
       {
@@ -1268,7 +1278,6 @@
     (function () {
       "use strict";
 
-      // ----- Utility: YouTube ID parser -----
       function parseYouTubeId(url) {
         if (!url) return null;
         const patterns = [
@@ -1283,7 +1292,6 @@
         return null;
       }
 
-      // ----- Avatar fallback (exposed globally for inline onerror) -----
       window.portfolioFallbackAvatar = function (imgEl) {
         imgEl.style.display = "none";
         const frame = imgEl.closest(".avatar-frame");
@@ -1293,7 +1301,6 @@
         }
       };
 
-      // ----- Theme toggle -----
       function initTheme() {
         const root = document.documentElement;
         const toggle = document.getElementById("themeToggle");
@@ -1322,7 +1329,6 @@
         });
       }
 
-      // ----- Mobile drawer -----
       function initMobileDrawer() {
         const hamburger = document.getElementById("hamburger");
         const drawer = document.getElementById("mobileDrawer");
@@ -1343,7 +1349,6 @@
         });
       }
 
-      // ----- Smooth scrolling & active nav -----
       function initNavHighlight() {
         const links = document.querySelectorAll('.nav-links a, .mobile-drawer a');
         const sections = document.querySelectorAll('section[id]');
@@ -1360,14 +1365,12 @@
         sections.forEach(function (s) { observer.observe(s); });
       }
 
-      // ----- Build projects grid (static + videos) -----
       function buildProjects() {
         const grid = document.getElementById("projectsGrid");
         if (!grid) return;
 
         const cards = [];
 
-        // Static projects
         STATIC_PROJECTS.forEach(function (p) {
           cards.push({
             title: p.title,
@@ -1378,7 +1381,6 @@
           });
         });
 
-        // Video projects
         FEATURED_VIDEOS.forEach(function (v) {
           const id = parseYouTubeId(v.url);
           if (!id) {
@@ -1394,7 +1396,6 @@
           });
         });
 
-        // Render
         grid.innerHTML = "";
         cards.forEach(function (card) {
           const article = document.createElement("article");
@@ -1434,7 +1435,6 @@
           grid.appendChild(article);
         });
 
-        // Filter functionality
         const filterButtons = document.querySelectorAll(".filter-btn");
         filterButtons.forEach(function (btn) {
           btn.addEventListener("click", function () {
@@ -1452,7 +1452,6 @@
         });
       }
 
-      // ----- Escape HTML (safety) -----
       function escapeHtml(str) {
         if (!str) return "";
         return String(str)
@@ -1463,7 +1462,6 @@
           .replace(/'/g, "&#039;");
       }
 
-      // ----- Video modal -----
       const videoModal = document.getElementById("videoModal");
       const iframeContainer = document.getElementById("iframeContainer");
       const modalClose = document.getElementById("modalClose");
@@ -1519,7 +1517,6 @@
         });
       }
 
-      // ----- Copy email + toast -----
       function initCopyEmail() {
         const copyBtn = document.getElementById("copyEmailBtn");
         const emailText = document.getElementById("emailText");
@@ -1567,7 +1564,6 @@
         }
       }
 
-      // ----- Contact form validation -----
       function initContactForm() {
         const form = document.getElementById("contactForm");
         if (!form) return;
@@ -1649,7 +1645,6 @@
         });
       }
 
-      // ----- Animate skill bars on scroll -----
       function initSkillBars() {
         const fills = document.querySelectorAll(".skill-bar-fill");
         if (!fills.length) return;
@@ -1666,13 +1661,11 @@
         fills.forEach(function (f) { observer.observe(f); });
       }
 
-      // ----- Set year in footer -----
       function initYear() {
         const yearEl = document.getElementById("year");
         if (yearEl) yearEl.textContent = new Date().getFullYear();
       }
 
-      // ----- Configure Facebook avatar from CONFIG constant -----
       function initAvatar() {
         const img = document.getElementById("profileAvatar");
         if (img && FACEBOOK_PROFILE_PICTURE_URL) {
@@ -1680,7 +1673,6 @@
         }
       }
 
-      // ----- Boot -----
       document.addEventListener("DOMContentLoaded", function () {
         initTheme();
         initMobileDrawer();
