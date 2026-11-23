@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="David Gabriel — Professional Video Editor. Showreel, editing services, and contact.">
+  <title>David Gabriel · Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ----- CSS CUSTOM PROPERTIES (LIGHT THEME) ----- */
+    :root {
+      --color-bg: #f8fafc;
+      --color-surface: #ffffff;
+      --color-surface-elevated: #ffffff;
+      --color-text-primary: #0f172a;
+      --color-text-secondary: #475569;
+      --color-text-tertiary: #64748b;
+      --color-border: #e2e8f0;
+      --color-accent: #3b82f6;
+      --color-accent-hover: #2563eb;
+      --color-accent-soft: #eff6ff;
+      --color-success: #10b981;
+      --color-error: #ef4444;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: 1.125rem;
+      --text-xl: 1.25rem;
+      --text-2xl: 1.5rem;
+      --text-3xl: 1.875rem;
+      --text-4xl: 2.25rem;
+      --text-5xl: 3rem;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-full: 9999px;
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1200px;
+      --header-height: 4.5rem;
+    }
+
+    /* ----- DARK THEME OVERRIDES ----- */
+    [data-theme="dark"] {
+      --color-bg: #0b1120;
+      --color-surface: #1e293b;
+      --color-surface-elevated: #1e293b;
+      --color-text-primary: #f1f5f9;
+      --color-text-secondary: #cbd5e1;
+      --color-text-tertiary: #94a3b8;
+      --color-border: #334155;
+      --color-accent: #60a5fa;
+      --color-accent-hover: #3b82f6;
+      --color-accent-soft: #1e3a8a;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+    }
+
+    /* ----- RESET & BASE ----- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color var(--transition-base), color var(--transition-base);
+    }
+
+    img, svg, iframe {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    a:hover { color: var(--color-accent-hover); }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: inherit;
+    }
+
+    ul { list-style: none; }
+
+    :focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-inline: var(--space-4);
+    }
+
+    /* ----- REDUCED MOTION ----- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ----- HEADER / NAV ----- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--header-height);
+      background-color: color-mix(in srgb, var(--color-bg) 90%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition-base), border-color var(--transition-base);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .logo span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: var(--color-accent);
+      border-radius: var(--radius-full);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-6);
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      font-size: var(--text-sm);
+      position: relative;
+      padding-block: var(--space-2);
+      transition: color var(--transition-fast);
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width var(--transition-fast);
+      border-radius: var(--radius-full);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--color-text-primary);
+    }
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .theme-toggle {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+    .theme-toggle:hover {
+      background: var(--color-accent-soft);
+      color: var(--color-accent);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 2.5rem;
+      height: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-md);
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--color-text-primary);
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+      border-radius: 2px;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: var(--header-height) 0 auto 0;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-4);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform var(--transition-base), opacity var(--transition-base);
+      z-index: 99;
+    }
+    .mobile-drawer.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .mobile-drawer nav {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .mobile-drawer a {
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-md);
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+    .mobile-drawer a:hover,
+    .mobile-drawer a.active {
+      background: var(--color-accent-soft);
+      color: var(--color-accent);
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      padding-block: var(--space-16) var(--space-20);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--color-accent);
+      background: var(--color-accent-soft);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      width: fit-content;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--color-accent);
+      border-radius: var(--radius-full);
+    }
+    .hero-title {
+      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+    .hero-description {
+      font-size: var(--text-lg);
+      color: var(--color-text-secondary);
+      max-width: 48ch;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      border: 1px solid transparent;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: var(--color-accent);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      color: #fff;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-secondary {
+      background: var(--color-surface);
+      color: var(--color-text-primary);
+      border-color: var(--color-border);
+    }
+    .btn-secondary:hover {
+      background: var(--color-accent-soft);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    /* Avatar */
+    .hero-avatar-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .avatar-frame {
+      position: relative;
+      width: min(100%, 320px);
+      aspect-ratio: 1;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 4px solid var(--color-surface);
+      box-shadow: var(--shadow-xl);
+      background: linear-gradient(135deg, var(--color-accent), #8b5cf6);
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    }
+    .avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    .avatar-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: #fff;
+      font-weight: 700;
+      font-size: clamp(3rem, 12vw, 6rem);
+      letter-spacing: -0.04em;
+      z-index: 0;
+    }
+
+    /* ----- SECTION COMMON ----- */
+    .section {
+      padding-block: var(--space-16);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: var(--space-10);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .section-eyebrow {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+    }
+    .section-title {
+      font-size: clamp(var(--text-2xl), 3.5vw, var(--text-3xl));
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    .section-subtitle {
+      color: var(--color-text-secondary);
+      font-size: var(--text-base);
+    }
+
+    /* ----- FILTERS ----- */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+    .filter-btn {
+      padding: var(--space-2) var(--space-5);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .filter-btn.active {
+      background: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+
+    /* ----- PROJECTS GRID ----- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-6);
+    }
+    .project-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-accent);
+    }
+    .project-card-body {
+      padding: var(--space-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      flex: 1;
+    }
+    .project-card-tag {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+    }
+    .project-card h3 {
+      font-size: var(--text-lg);
+      font-weight: 600;
+    }
+    .project-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      flex: 1;
+    }
+    .project-card .project-link {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      margin-top: var(--space-2);
+    }
+
+    /* ----- VIDEO CARD (special inside projects) ----- */
+    .video-thumbnail {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .video-card:hover .video-thumbnail img {
+      transform: scale(1.05);
+    }
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(0,0,0,0.3);
+      transition: background var(--transition-fast);
+    }
+    .video-thumbnail:hover .play-overlay {
+      background: rgba(0,0,0,0.45);
+    }
+    .play-icon {
+      width: 4rem;
+      height: 4rem;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.95);
+      border-radius: var(--radius-full);
+      color: #0f172a;
+      box-shadow: var(--shadow-lg);
+      transition: transform var(--transition-fast), background var(--transition-fast);
+    }
+    .play-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 4px;
+    }
+    .video-card:hover .play-icon {
+      transform: scale(1.1);
+      background: #fff;
+    }
+
+    /* ----- SKILLS & EXPERIENCE ----- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-10);
+    }
+    .skill-category h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .skill-category h3 span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: var(--color-accent);
+    }
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+    .skill-item-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+    .skill-bar {
+      height: 6px;
+      background: var(--color-border);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-accent), #8b5cf6);
+      border-radius: var(--radius-full);
+      width: 0;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .experience-item {
+      border-left: 2px solid var(--color-accent);
+      padding-left: var(--space-5);
+      position: relative;
+    }
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 8px;
+      height: 8px;
+      background: var(--color-accent);
+      border-radius: var(--radius-full);
+    }
+    .experience-item h4 {
+      font-size: var(--text-base);
+      font-weight: 600;
+    }
+    .experience-item .exp-meta {
+      font-size: var(--text-sm);
+      color: var(--color-text-tertiary);
+      margin-bottom: var(--space-1);
+    }
+    .experience-item p {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+    }
+
+    /* ----- CONTACT ----- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-10);
+      align-items: start;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .contact-info h3 {
+      font-size: var(--text-xl);
+    }
+    .contact-info p {
+      color: var(--color-text-secondary);
+      font-size: var(--text-sm);
+    }
+    .contact-email-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+    .contact-email {
+      font-weight: 600;
+      font-size: var(--text-lg);
+      color: var(--color-text-primary);
+    }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      background: var(--color-accent-soft);
+      color: var(--color-accent);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      border: 1px solid var(--color-accent);
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+    .copy-btn:hover {
+      background: var(--color-accent);
+      color: #fff;
+    }
+    .social-links {
+      display: flex;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+    .social-links a {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      transition: all var(--transition-fast);
+    }
+    .social-links a:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      background: var(--color-surface);
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+    .form-group label {
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg);
+      color: var(--color-text-primary);
+      font-family: inherit;
+      font-size: var(--text-sm);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .form-feedback {
+      font-size: var(--text-xs);
+      min-height: 1.25rem;
+    }
+    .form-feedback.error { color: var(--color-error); }
+    .form-feedback.success { color: var(--color-success); }
+    .form-group.invalid input,
+    .form-group.invalid textarea {
+      border-color: var(--color-error);
+    }
+
+    /* ----- TOAST ----- */
+    .toast {
+      position: fixed;
+      bottom: var(--space-6);
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      background: var(--color-text-primary);
+      color: var(--color-bg);
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      box-shadow: var(--shadow-xl);
+      opacity: 0;
+      transition: transform var(--transition-base), opacity var(--transition-base);
+      pointer-events: none;
+      z-index: 1000;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ----- VIDEO MODAL (THEATER) ----- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: grid;
+      place-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-base), visibility var(--transition-base);
+      padding: var(--space-4);
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-content {
+      width: min(100%, 960px);
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      transform: scale(0.95);
+      transition: transform var(--transition-base);
+    }
+    .modal-overlay.open .modal-content {
+      transform: scale(1);
+    }
+    .modal-content iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .modal-close {
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-4);
+      width: 2.75rem;
+      height: 2.75rem;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(4px);
+      transition: background var(--transition-fast), transform var(--transition-fast);
+      z-index: 2;
+    }
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+    .modal-close svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    /* ----- FOOTER ----- */
+    .site-footer {
+      border-top: 1px solid var(--color-border);
+      padding-block: var(--space-8);
+      text-align: center;
+      color: var(--color-text-tertiary);
+      font-size: var(--text-sm);
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-8);
+      }
+      .hero-content {
+        align-items: center;
+      }
+      .hero-description {
+        margin-inline: auto;
+      }
+      .hero-ctas {
+        justify-content: center;
+      }
+      .hero-avatar-wrap { order: -1; }
+      .avatar-frame { width: min(100%, 240px); }
+
+      .skills-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-drawer { display: block; }
+    }
+
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding-inline: var(--space-4);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Home">
+        <span aria-hidden="true"></span> DG<span aria-hidden="true">.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#hero" class="active">Home</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav aria-label="Mobile">
+        <a href="#hero">Home</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Available for student commissions</span>
+          <h1 class="hero-title">
+            Hi, I'm David.<br>I turn raw footage into <em>stories that stick</em>.
+          </h1>
+          <p class="hero-description">
+            Video editor with 3+ years of experience, specializing in student commissions.
+            From short-form social clips and school projects to corporate films,
+            documentaries, and broadcast-ready edits.
+          </p>
+          <div class="hero-ctas">
+            <a href="#work" class="btn btn-primary">
+              Watch showreel
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Start a project
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar-wrap">
+          <div class="avatar-frame" id="avatarFrame">
+            <!-- Facebook profile picture: replace the src with your own Facebook image URL -->
+            <img
+              id="profileAvatar"
+              src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-1/863381626_1631530508707771_3229720357454502442_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s200x200&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEauTI_GuL-8rxf1M4BDV3lOHrWW3b3y3M4etZbdvfLcwNXFGkxKwkS-Jj-VCpJzuWsaOtRXpZK6GTF9l9hrONt&_nc_ohc=yH4a-I8IxP4Q7kNvwHhLM-5&_nc_oc=Ado4hLn27O48XYnDj_8kJzYFVb9BHb61r0LM67REihIKflyT76DiVImYke18hvwEcDo&_nc_zt=24&_nc_ht=scontent.fcrk1-2.fna&_nc_gid=bu6yKRb38qIvXj3uE92EqQ&_nc_ss=7b2a8&oh=00_AQS2jUtTE5hhvU-uefgNoWuzWslW_1pNF-WcCjF-JCr0lw&oe=6B0A115E"
+              alt="David Gabriel profile photo"
+              loading="eager"
+              onerror="window.portfolioFallbackAvatar && window.portfolioFallbackAvatar(this)"
+            >
+            <!-- Fallback SVG monogram -->
+            <div class="avatar-fallback" aria-hidden="true">DG</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK / PROJECTS + VIDEOS ===== -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Portfolio</span>
+          <h2 class="section-title">Featured Edits &amp; Showreel</h2>
+          <p class="section-subtitle">A selection of editing work across formats. Filter by category or click a video to play inline.</p>
+        </div>
+
+        <!-- Filter bar (original categories preserved) -->
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="short">Short‑Form</button>
+          <button class="filter-btn" data-filter="youtube">YouTube</button>
+          <button class="filter-btn" data-filter="corporate">Corporate</button>
+          <button class="filter-btn" data-filter="music">Music Video</button>
+          <button class="filter-btn" data-filter="documentary">Documentary</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS & EXPERIENCE ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Capabilities</span>
+          <h2 class="section-title">Editing Skills &amp; Experience</h2>
+          <p class="section-subtitle">Every format, every platform — I bring the polish and the story.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><span></span>Core Editing Skills</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-item-header"><span>Student Commissions &amp; School Projects</span><span>98%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="98"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header"><span>Short‑Form &amp; Social (Reels, Shorts, TikTok)</span><span>96%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="96"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header"><span>YouTube Long‑Form &amp; Retention Editing</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header"><span>Corporate &amp; Brand Films</span><span>92%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header"><span>Music Videos &amp; Rhythm Editing</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-item-header"><span>Documentary &amp; Long‑Form Storytelling</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3><span></span>Tools &amp; Experience</h3>
+            <div class="experience-list">
+              <div class="experience-item">
+                <h4>Adobe Premiere Pro · After Effects · DaVinci Resolve</h4>
+                <div class="exp-meta">Primary editing &amp; finishing suite</div>
+                <p>Expert‑level timeline editing, motion graphics, color grading, and audio mixing.</p>
+              </div>
+              <div class="experience-item">
+                <h4>CapCut · Final Cut Pro · Audition</h4>
+                <div class="exp-meta">Fast‑turnaround &amp; social formats</div>
+                <p>Optimized workflows for short‑form content and rapid delivery.</p>
+              </div>
+              <div class="experience-item">
+                <h4>3+ Years Professional Editing</h4>
+                <div class="exp-meta">2023 — Present</div>
+                <p>Worked with students, creators, and brands on 50+ delivered videos.</p>
+              </div>
+              <div class="experience-item">
+                <h4>Student Commission Specialist</h4>
+                <div class="exp-meta">School Projects · Promotional Videos · Creative Films</div>
+                <p>Affordable, high‑quality edits for students — with fast turnaround and clear communication.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Get in touch</span>
+          <h2 class="section-title">Let's edit something great</h2>
+          <p class="section-subtitle">Have footage that needs a story? Drop me a line or copy my email directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>David Gabriel</h3>
+            <p>Video editor based in London, focused on student commissions and short‑form content. Open to freelance and long‑term collaborations.</p>
+            <div class="contact-email-row">
+              <span class="contact-email" id="emailText">gamboadavidgabriel@gmail.com</span>
+              <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy
+              </button>
+            </div>
+            <div class="social-links">
+              <!-- ✅ Facebook link -->
+              <a href="https://www.facebook.com/GhabrieI" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <!-- ✅ Instagram link -->
+              <a href="https://www.instagram.com/supremo.gb/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group" id="nameGroup">
+              <label for="nameInput">Name</label>
+              <input type="text" id="nameInput" name="name" placeholder="Your name" autocomplete="name" required>
+              <span class="form-feedback" id="nameFeedback"></span>
+            </div>
+            <div class="form-group" id="emailGroup">
+              <label for="emailInput">Email</label>
+              <input type="email" id="emailInput" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <span class="form-feedback" id="emailFeedback"></span>
+            </div>
+            <div class="form-group" id="messageGroup">
+              <label for="messageInput">Project details</label>
+              <textarea id="messageInput" name="message" placeholder="Tell me about your footage, format, and timeline..." required></textarea>
+              <span class="form-feedback" id="messageFeedback"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Send message</button>
+            <span class="form-feedback" id="formFeedback" style="text-align:center;"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> David Gabriel · Video Editor. Built with care.</p>
+    </div>
+  </footer>
+
+  <!-- ===== VIDEO MODAL ===== -->
+  <div class="modal-overlay" id="videoModal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close video">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="iframeContainer"></div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // ============================================================
+    // CONFIG: PASTE YOUR FACEBOOK PROFILE PICTURE URL / ID HERE
+    // ============================================================
+    const FACEBOOK_PROFILE_PICTURE_URL = "https://scontent.fcrk1-2.fna.fbcdn.net/v/t39.30808-1/863381626_1631530508707771_3229720357454502442_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s200x200&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEauTI_GuL-8rxf1M4BDV3lOHrWW3b3y3M4etZbdvfLcwNXFGkxKwkS-Jj-VCpJzuWsaOtRXpZK6GTF9l9hrONt&_nc_ohc=yH4a-I8IxP4Q7kNvwHhLM-5&_nc_oc=Ado4hLn27O48XYnDj_8kJzYFVb9BHb61r0LM67REihIKflyT76DiVImYke18hvwEcDo&_nc_zt=24&_nc_ht=scontent.fcrk1-2.fna&_nc_gid=bu6yKRb38qIvXj3uE92EqQ&_nc_ss=7b2a8&oh=00_AQS2jUtTE5hhvU-uefgNoWuzWslW_1pNF-WcCjF-JCr0lw&oe=6B0A115E";
+
+    // ============================================================
+    // CONFIG: YOUTUBE VIDEO LINKS
+    // ============================================================
+    // First 3 are your actual samples (Short-Form category).
+    // Sample 4 & 5 are placeholders — paste your URLs when ready.
+    const FEATURED_VIDEOS = [
+      {
+        url: "https://www.youtube.com/watch?v=QaV5Vjv4Nko",
+        title: "Commercial Promoting Edit",
+        category: "short",
+        description: "Short-form promotional commercial with dynamic cuts and branding."
+      },
+      {
+        url: "https://www.youtube.com/watch?v=m9I8f_IsC1Q",
+        title: "Short Film Edit",
+        category: "short",
+        description: "Narrative short film edit focused on pacing and emotional beats."
+      },
+      {
+        url: "https://www.youtube.com/watch?v=Dx6KW0x71wo",
+        title: "Lesson Film Edit",
+        category: "short",
+        description: "Educational lesson-style edit with clear visuals and engaging flow."
+      },
+      {
+        url: "",
+        title: "Drama Film Edit",
+        category: "documentary",
+        description: "Drama-driven narrative edit — add your YouTube link in the config array."
+      },
+      {
+        url: "",
+        title: "Horror Film Edit",
+        category: "documentary",
+        description: "Tension-building horror edit — add your YouTube link in the config array."
+      }
+    ];
+
+    // ============================================================
+    // CONFIG: STATIC PROJECTS (non-video)
+    // ============================================================
+    const STATIC_PROJECTS = [
+      {
+        title: "Student Commission Showcase",
+        category: "short",
+        description: "A collection of student-commissioned edits — from school projects to promotional content.",
+        link: "#"
+      },
+      {
+        title: "Podcast-to-YouTube System",
+        category: "youtube",
+        description: "Full episode edits with chapter markers, animated overlays, and retention boosts.",
+        link: "#"
+      },
+      {
+        title: "Corporate Interview Series",
+        category: "corporate",
+        description: "Multi-cam interview edits for an internal comms series with brand motion graphics.",
+        link: "#"
+      }
+    ];
+
+    // ============================================================
+    // MODULE: Portfolio App (IIFE — zero global pollution)
+    // ============================================================
+    (function () {
+      "use strict";
+
+      // ----- Utility: YouTube ID parser -----
+      function parseYouTubeId(url) {
+        if (!url) return null;
+        const patterns = [
+          /(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/,
+          /(?:youtu\.be\/)([a-zA-Z0-9_-]{11})/,
+          /(?:youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/
+        ];
+        for (const p of patterns) {
+          const m = url.match(p);
+          if (m) return m[1];
+        }
+        return null;
+      }
+
+      // ----- Avatar fallback (exposed globally for inline onerror) -----
+      window.portfolioFallbackAvatar = function (imgEl) {
+        imgEl.style.display = "none";
+        const frame = imgEl.closest(".avatar-frame");
+        if (frame) {
+          const fallback = frame.querySelector(".avatar-fallback");
+          if (fallback) fallback.style.zIndex = "2";
+        }
+      };
+
+      // ----- Theme toggle -----
+      function initTheme() {
+        const root = document.documentElement;
+        const toggle = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const initial = stored || (prefersDark ? "dark" : "light");
+        root.setAttribute("data-theme", initial);
+        updateIcon(initial);
+
+        function updateIcon(theme) {
+          if (!icon) return;
+          if (theme === "dark") {
+            icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+          } else {
+            icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+          }
+        }
+
+        toggle.addEventListener("click", function () {
+          const current = root.getAttribute("data-theme");
+          const next = current === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          updateIcon(next);
+        });
+      }
+
+      // ----- Mobile drawer -----
+      function initMobileDrawer() {
+        const hamburger = document.getElementById("hamburger");
+        const drawer = document.getElementById("mobileDrawer");
+        if (!hamburger || !drawer) return;
+
+        function close() {
+          drawer.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+        }
+
+        hamburger.addEventListener("click", function () {
+          const isOpen = drawer.classList.toggle("open");
+          hamburger.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        drawer.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", close);
+        });
+      }
+
+      // ----- Smooth scrolling & active nav -----
+      function initNavHighlight() {
+        const links = document.querySelectorAll('.nav-links a, .mobile-drawer a');
+        const sections = document.querySelectorAll('section[id]');
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              links.forEach(function (link) {
+                link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+              });
+            }
+          });
+        }, { rootMargin: "-40% 0px -55% 0px" });
+        sections.forEach(function (s) { observer.observe(s); });
+      }
+
+      // ----- Build projects grid (static + videos) -----
+      function buildProjects() {
+        const grid = document.getElementById("projectsGrid");
+        if (!grid) return;
+
+        const cards = [];
+
+        // Static projects
+        STATIC_PROJECTS.forEach(function (p) {
+          cards.push({
+            title: p.title,
+            category: p.category,
+            description: p.description,
+            link: p.link,
+            type: "static"
+          });
+        });
+
+        // Video projects
+        FEATURED_VIDEOS.forEach(function (v) {
+          const id = parseYouTubeId(v.url);
+          if (!id) {
+            console.warn("Could not parse YouTube ID from:", v.url);
+            return;
+          }
+          cards.push({
+            title: v.title,
+            category: v.category,
+            description: v.description,
+            youtubeId: id,
+            type: "video"
+          });
+        });
+
+        // Render
+        grid.innerHTML = "";
+        cards.forEach(function (card) {
+          const article = document.createElement("article");
+          article.className = "project-card" + (card.type === "video" ? " video-card" : "");
+          article.dataset.category = card.category;
+
+          if (card.type === "video") {
+            const thumb = document.createElement("div");
+            thumb.className = "video-thumbnail";
+            thumb.innerHTML =
+              '<img src="https://img.youtube.com/vi/' + card.youtubeId + '/hqdefault.jpg" alt="Video thumbnail for ' + escapeHtml(card.title) + '" loading="lazy">' +
+              '<div class="play-overlay"><div class="play-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>';
+            thumb.addEventListener("click", function () {
+              openVideoModal(card.youtubeId);
+            });
+            article.appendChild(thumb);
+          }
+
+          const body = document.createElement("div");
+          body.className = "project-card-body";
+          body.innerHTML =
+            '<span class="project-card-tag">' + escapeHtml(card.category) + '</span>' +
+            '<h3>' + escapeHtml(card.title) + '</h3>' +
+            '<p>' + escapeHtml(card.description) + '</p>' +
+            (card.type === "video"
+              ? '<button class="project-link" style="background:none;border:none;cursor:pointer;color:var(--color-accent);padding:0;">Watch video →</button>'
+              : '<a class="project-link" href="' + escapeHtml(card.link || "#") + '">View project →</a>');
+          article.appendChild(body);
+
+          if (card.type === "video") {
+            const btn = body.querySelector("button");
+            btn.addEventListener("click", function () {
+              openVideoModal(card.youtubeId);
+            });
+          }
+
+          grid.appendChild(article);
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        filterButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            filterButtons.forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            const filter = btn.dataset.filter;
+            grid.querySelectorAll(".project-card").forEach(function (card) {
+              if (filter === "all" || card.dataset.category === filter) {
+                card.style.display = "";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      }
+
+      // ----- Escape HTML (safety) -----
+      function escapeHtml(str) {
+        if (!str) return "";
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      // ----- Video modal -----
+      const videoModal = document.getElementById("videoModal");
+      const iframeContainer = document.getElementById("iframeContainer");
+      const modalClose = document.getElementById("modalClose");
+      let lastFocusedElement = null;
+
+      function openVideoModal(videoId) {
+        if (!videoModal || !iframeContainer) return;
+        lastFocusedElement = document.activeElement;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube-nocookie.com/embed/" + videoId +
+                     "?autoplay=1&rel=0&enablejsapi=1&origin=" +
+                     encodeURIComponent(window.location.origin || "https://localhost");
+        iframe.title = "YouTube video player";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        iframe.setAttribute("referrerpolicy", "origin-when-cross-origin");
+
+        iframeContainer.innerHTML = "";
+        iframeContainer.appendChild(iframe);
+        videoModal.classList.add("open");
+        videoModal.setAttribute("aria-hidden", "false");
+
+        setTimeout(function () {
+          if (modalClose) modalClose.focus();
+        }, 50);
+      }
+
+      function closeVideoModal() {
+        if (!videoModal) return;
+        videoModal.classList.remove("open");
+        videoModal.setAttribute("aria-hidden", "true");
+        setTimeout(function () {
+          iframeContainer.innerHTML = "";
+        }, 300);
+        if (lastFocusedElement) {
+          lastFocusedElement.focus();
+          lastFocusedElement = null;
+        }
+      }
+
+      if (modalClose) {
+        modalClose.addEventListener("click", closeVideoModal);
+      }
+      if (videoModal) {
+        videoModal.addEventListener("click", function (e) {
+          if (e.target === videoModal) closeVideoModal();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && videoModal.classList.contains("open")) {
+            closeVideoModal();
+          }
+        });
+      }
+
+      // ----- Copy email + toast -----
+      function initCopyEmail() {
+        const copyBtn = document.getElementById("copyEmailBtn");
+        const emailText = document.getElementById("emailText");
+        const toast = document.getElementById("toast");
+        let toastTimer;
+
+        if (!copyBtn || !emailText || !toast) return;
+
+        function showToast(msg) {
+          toast.textContent = msg;
+          toast.classList.add("show");
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () {
+            toast.classList.remove("show");
+          }, 2200);
+        }
+
+        copyBtn.addEventListener("click", function () {
+          const email = emailText.textContent.trim();
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(function () {
+              showToast("Email copied to clipboard!");
+            }).catch(function () {
+              fallbackCopy(email);
+            });
+          } else {
+            fallbackCopy(email);
+          }
+        });
+
+        function fallbackCopy(text) {
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand("copy");
+            showToast("Email copied to clipboard!");
+          } catch (err) {
+            showToast("Could not copy — please select manually.");
+          }
+          document.body.removeChild(ta);
+        }
+      }
+
+      // ----- Contact form validation -----
+      function initContactForm() {
+        const form = document.getElementById("contactForm");
+        if (!form) return;
+
+        const nameInput = document.getElementById("nameInput");
+        const emailInput = document.getElementById("emailInput");
+        const messageInput = document.getElementById("messageInput");
+        const nameGroup = document.getElementById("nameGroup");
+        const emailGroup = document.getElementById("emailGroup");
+        const messageGroup = document.getElementById("messageGroup");
+        const nameFeedback = document.getElementById("nameFeedback");
+        const emailFeedback = document.getElementById("emailFeedback");
+        const messageFeedback = document.getElementById("messageFeedback");
+        const formFeedback = document.getElementById("formFeedback");
+
+        function setFeedback(group, feedbackEl, msg, isValid) {
+          group.classList.toggle("invalid", !isValid);
+          feedbackEl.textContent = msg;
+          feedbackEl.className = "form-feedback " + (isValid ? "success" : "error");
+        }
+
+        function validate() {
+          let valid = true;
+
+          if (!nameInput.value.trim()) {
+            setFeedback(nameGroup, nameFeedback, "Please enter your name.", false);
+            valid = false;
+          } else {
+            setFeedback(nameGroup, nameFeedback, "", true);
+          }
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value.trim()) {
+            setFeedback(emailGroup, emailFeedback, "Please enter your email.", false);
+            valid = false;
+          } else if (!emailRegex.test(emailInput.value.trim())) {
+            setFeedback(emailGroup, emailFeedback, "Please enter a valid email address.", false);
+            valid = false;
+          } else {
+            setFeedback(emailGroup, emailFeedback, "", true);
+          }
+
+          if (!messageInput.value.trim()) {
+            setFeedback(messageGroup, messageFeedback, "Please enter a message.", false);
+            valid = false;
+          } else if (messageInput.value.trim().length < 10) {
+            setFeedback(messageGroup, messageFeedback, "Message should be at least 10 characters.", false);
+            valid = false;
+          } else {
+            setFeedback(messageGroup, messageFeedback, "", true);
+          }
+
+          return valid;
+        }
+
+        [nameInput, emailInput, messageInput].forEach(function (el) {
+          el.addEventListener("input", function () {
+            el.closest(".form-group").classList.remove("invalid");
+            el.closest(".form-group").querySelector(".form-feedback").textContent = "";
+          });
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          formFeedback.textContent = "";
+          formFeedback.className = "form-feedback";
+
+          if (validate()) {
+            formFeedback.textContent = "Thanks! Your message has been sent (demo).";
+            formFeedback.className = "form-feedback success";
+            form.reset();
+            [nameGroup, emailGroup, messageGroup].forEach(function (g) {
+              g.classList.remove("invalid");
+            });
+          } else {
+            formFeedback.textContent = "Please fix the errors above.";
+            formFeedback.className = "form-feedback error";
+          }
+        });
+      }
+
+      // ----- Animate skill bars on scroll -----
+      function initSkillBars() {
+        const fills = document.querySelectorAll(".skill-bar-fill");
+        if (!fills.length) return;
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const width = el.dataset.width || "0";
+              el.style.width = width + "%";
+              observer.unobserve(el);
+            }
+          });
+        }, { threshold: 0.3 });
+        fills.forEach(function (f) { observer.observe(f); });
+      }
+
+      // ----- Set year in footer -----
+      function initYear() {
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+      }
+
+      // ----- Configure Facebook avatar from CONFIG constant -----
+      function initAvatar() {
+        const img = document.getElementById("profileAvatar");
+        if (img && FACEBOOK_PROFILE_PICTURE_URL) {
+          img.src = FACEBOOK_PROFILE_PICTURE_URL;
+        }
+      }
+
+      // ----- Boot -----
+      document.addEventListener("DOMContentLoaded", function () {
+        initTheme();
+        initMobileDrawer();
+        initNavHighlight();
+        buildProjects();
+        initCopyEmail();
+        initContactForm();
+        initSkillBars();
+        initYear();
+        initAvatar();
+      });
+    })();
+  </script>
+</body>
+</html>
